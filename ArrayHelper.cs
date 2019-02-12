@@ -6,15 +6,27 @@ namespace PadawansTask5
     {
         public static string CheckIfSymmetric(int[] source)
         {
-            // put your code here
-            for (int i = 0; i < source.Length / 2; ++i)
+            int[] check = { };
+            if (source == null)
             {
-                if (source[i] != source[source.Length - 1 - i])
-                {
-                    return "No";
-                }
+                throw new ArgumentNullException();
             }
-            return "Yes";
+            else if (source == check)
+            {
+                throw new ArgumentException();
+            }
+            else
+            {
+                // put your code here
+                for (int i = 0; i < source.Length / 2; ++i)
+                {
+                    if (source[i] != source[source.Length - 1 - i])
+                    {
+                        return "No";
+                    }
+                }
+                return "Yes";
+            }
         }
     }
 }
