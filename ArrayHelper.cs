@@ -6,12 +6,12 @@ namespace PadawansTask5
     {
         public static string CheckIfSymmetric(int[] source)
         {
-            int[] check = { };
+
             if (source == null)
             {
                 throw new ArgumentNullException();
             }
-            else if (source == check)
+            else if (source.Length == 0)
             {
                 throw new ArgumentException();
             }
